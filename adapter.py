@@ -1,4 +1,5 @@
 class A:
+	name="A"
 	def call_A(self):
 		print "You have called A!"
 
@@ -21,6 +22,9 @@ class Adapter(object):
 
 		self._initialised=True
 
+	def __getattr__(self,attr):
+		return getattr(self.obj,attr)
+
 	def __setattr__(self,key,value):
 		if not self._initialised:
 			super(Adapter,self).__setattr__(key,value)
@@ -32,4 +36,13 @@ if __name__ == '__main__':
 
 	for adapter in adapters:
 		adapter.call()
-	
+
+	A_adapter = adapters[0]
+	print A_adapter.name
+	print A_adapter.obj.name
+
+	A_adapter.name="New A"
+
+	print A_adapter.name
+	print A_adapter.obj.name
+
