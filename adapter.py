@@ -1,5 +1,5 @@
 class A:
-	name="A"
+	_name="A"
 	def call_A(self):
 		print "You have called A!"
 
@@ -38,11 +38,11 @@ if __name__ == '__main__':
 		adapter.call()
 
 	A_adapter = adapters[0]
-	print A_adapter.name
-	print A_adapter.obj.name
+	print A_adapter._name
+	print A_adapter.obj._name
 
-	A_adapter.name="New A"
+	A_adapter._name="New A"
 
-	print A_adapter.name
-	print A_adapter.obj.name
+	print A_adapter._name
+	print A_adapter.obj._name
 
