@@ -10,3 +10,8 @@
 * Here, we do not have to make instances of the classes in the main function but in facade design class, from where we call the adapter, which is cool!
 * You can also access attributes of the classes from the facade, from the adapter, even if the attributes are private!
 
+### Observer Design Pattern:
+* Observer Pattern lets us keep track of any changes in the instance values we are observing.
+* Observer class has one update method which is to be overridden to print the change notification after the change is made in the setattr method.
+* Observable class lets us manage our adding, removing observers which is used as a parent class to the Adapter method to add observers to the adapters. Pretty Cool!
+
