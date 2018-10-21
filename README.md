@@ -15,3 +15,8 @@
 * Observer class has one update method which is to be overridden to print the change notification after the change is made in the setattr method.
 * Observable class lets us manage our adding, removing observers which is used as a parent class to the Adapter method to add observers to the adapters. Pretty Cool!
 
+### Singleton Design Pattern:
+* Singleton Pattern is useful when you need a single instance of any class, and every other thing goes around with that only instance.
+* In the Parking Lot example, we only need one instance of the lot class, so we can use the singleton design pattern there. 
+* We have to make a static getInstance method to retrieve the only created instance whenever we need to.
+
